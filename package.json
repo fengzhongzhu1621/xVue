@@ -1,9 +1,10 @@
 {
-  "name": "xVue",
+  "name": "xvue",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "vite build"
+    "build": "vite build",
+    "rsw:deploy": "rsw && vite build"
   },
   "dependencies": {
     "vue": "^3.0.4"
