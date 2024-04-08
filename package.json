@@ -1,16 +1,20 @@
 {
   "name": "xvue",
+  "private": true,
   "version": "0.0.0",
+  "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "rsw:deploy": "rsw && vite build"
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "vue": "^3.0.4"
+    "vue": "^3.4.21"
   },
   "devDependencies": {
-    "vite": "^1.0.0-rc.13",
-    "@vue/compiler-sfc": "^3.0.4"
+    "@vitejs/plugin-vue": "^5.0.4",
+    "typescript": "^5.2.2",
+    "vite": "^5.2.0",
+    "vue-tsc": "^2.0.6"
   }
 }
