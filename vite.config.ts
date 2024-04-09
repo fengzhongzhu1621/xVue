@@ -4,6 +4,7 @@ import wasm from "vite-plugin-wasm";
 import topLevelAwait from "vite-plugin-top-level-await";
 import eslint from "vite-plugin-eslint2";
 import checker from "vite-plugin-checker";
+import icons from "vite-plugin-icons";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -16,5 +17,6 @@ export default defineConfig({
       typescript: true,
       vueTsc: true,
     }),
+    icons(),
   ],
 });
