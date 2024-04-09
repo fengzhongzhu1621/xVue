@@ -19,6 +19,7 @@
     "typescript": "^5.2.2",
     "vite": "^5.2.0",
     "vite-plugin-checker": "^0.6.4",
+    "vite-plugin-top-level-await": "^1.4.1",
     "vite-plugin-wasm": "^3.3.0",
     "vue-tsc": "^2.0.6"
   }
