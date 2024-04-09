@@ -19,11 +19,13 @@
     "typescript": "^5.2.2",
     "vite": "^5.2.0",
     "vite-plugin-checker": "^0.6.4",
+    "vite-plugin-components": "^0.13.3",
     "vite-plugin-eslint": "^1.8.1",
     "vite-plugin-eslint2": "^4.4.0",
     "vite-plugin-icons": "^0.6.5",
     "vite-plugin-top-level-await": "^1.4.1",
     "vite-plugin-wasm": "^3.3.0",
+    "vite-svg-loader": "^5.1.0",
     "vue-tsc": "^2.0.6"
   }
 }

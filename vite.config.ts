@@ -5,6 +5,7 @@ import topLevelAwait from "vite-plugin-top-level-await";
 import eslint from "vite-plugin-eslint2";
 import checker from "vite-plugin-checker";
 import icons from "vite-plugin-icons";
+import svgLoader from "vite-svg-loader";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -18,5 +19,6 @@ export default defineConfig({
       vueTsc: true,
     }),
     icons(),
+    svgLoader(),
   ],
 });
