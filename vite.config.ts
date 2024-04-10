@@ -4,7 +4,7 @@ import wasm from "vite-plugin-wasm";
 import topLevelAwait from "vite-plugin-top-level-await";
 import eslint from "vite-plugin-eslint2";
 import checker from "vite-plugin-checker";
-import icons from "vite-plugin-icons";
+import icons from "unplugin-icons";
 import svgLoader from "vite-svg-loader";
 
 // https://vitejs.dev/config/
