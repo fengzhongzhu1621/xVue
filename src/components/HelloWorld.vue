@@ -1,17 +1,25 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+import init, { greet } from "wasm/@jinyinqiao/hello/pkg/hello.js";
 
 /* 声明该组件需要接收的props，它需要传递一个包含props字段的对象，每个字段表示该props的默认值和类型等信息 */
 defineProps<{ msg: string }>()
 
 const count = ref(0)
+
+const click = function () {
+  count.value = count.value + 1
+  init().then(() => {
+        greet();
+  });
+}
 </script>
 
 <template>
   <h1>{{ msg }}</h1>
 
   <div class="card">
-    <button type="button" @click="count++">count is {{ count }}</button>
+    <button type="button" @click="click">count is {{ count }}</button>
     <p>
       Edit
       <code>components/HelloWorld.vue</code> to test HMR
@@ -37,3 +45,4 @@ const count = ref(0)
   color: #888;
 }
 </style>
+wasm/@jinyinqiao/hello/pkg/hello.js

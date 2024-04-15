@@ -5,6 +5,7 @@ import topLevelAwait from "vite-plugin-top-level-await";
 import eslint from "vite-plugin-eslint2";
 import icons from "unplugin-icons/vite";
 import svgLoader from "vite-svg-loader";
+import { resolve } from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -16,4 +17,11 @@ export default defineConfig({
     icons({ compiler: "vue3" }),
     svgLoader(),
   ],
+  resolve: {
+    alias: {
+      "@": resolve(__dirname, "src"),
+      wasm: resolve(__dirname, "wasm"),
+    },
+  },
+  base: "./",
 });
