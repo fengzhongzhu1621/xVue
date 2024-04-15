@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
+/* 声明该组件需要接收的props，它需要传递一个包含props字段的对象，每个字段表示该props的默认值和类型等信息 */
 defineProps<{ msg: string }>()
 
 const count = ref(0)

@@ -22,6 +22,7 @@ import HelloWorld from './components/HelloWorld.vue'
   transition: filter 300ms;
 }
 .logo:hover {
+  /* 给一个元素添加阴影，这个阴影并不对应于它的边界框，，而是使用该元素的Alpha蒙版。 */
   filter: drop-shadow(0 0 2em #646cffaa);
 }
 .logo.vue:hover {
