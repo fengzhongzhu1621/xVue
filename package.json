@@ -5,8 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc && vite build",
-    "preview": "vite preview"
+    "build": "rsw build && vue-tsc && vite build",
+    "preview": "vite preview",
+    "rsw": "rsw build"
   },
   "dependencies": {
     "vue": "^3.4.21"
