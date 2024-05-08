@@ -15,7 +15,7 @@ export default {
         // 消息接受方，监听 Bus 实例的事件
         Bus.$on("sendMessage", (message) => {
             this.message = message
-        }
+        })
     }
 }
 </script>

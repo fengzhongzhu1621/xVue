@@ -10,7 +10,7 @@
 
 <script>
 // 引入子组件
-import FxSon from "@components/FxSon.vue"
+import FxSon from "@components/examples/FxSon.vue"
 
 export default {
     data() {
