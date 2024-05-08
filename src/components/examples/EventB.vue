@@ -1,6 +1,5 @@
 <template>
     <h3>我是组件 EventB</h3>
-    <
 </template>
 
 <script type="text/javascript">
