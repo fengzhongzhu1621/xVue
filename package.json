@@ -11,7 +11,7 @@
     "build": "rsw build && vue-tsc && vite build",
     "preview": "vite preview",
     "rsw": "rsw build",
-    "lint-fix": "eslint --fix --ext .js --ext .jsx --ext .vue src/"
+    "lint-fix": "eslint --fix src/"
   },
   "dependencies": {
     "vue": "^3.4.27"
