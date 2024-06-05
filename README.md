@@ -16,3 +16,9 @@ vite --force 强制优化器忽略缓存并重新构建
 ```
 npm init @eslint/config
 ```
+
+
+## tailwindcss
+```
+npx tailwindcss init
+```
