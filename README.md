@@ -7,3 +7,12 @@ This template should help get you started developing with Vue 3 and TypeScript i
 - [VS Code](https://code.visualstudio.com/) + [Vue - Official](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (previously Volar) and disable Vetur
 
 - Use [vue-tsc](https://github.com/vuejs/language-tools/tree/master/packages/tsc) for performing the same type checking from the command line, or for generating d.ts files for SFCs.
+
+## package.json
+vite --force 强制优化器忽略缓存并重新构建
+
+## eslint
+
+```
+npm init @eslint/config
+```
