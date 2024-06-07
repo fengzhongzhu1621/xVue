@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+import daisyui from "daisyui";
+import tailwindCss3d from "tailwindcss-3d";
+
 export default {
   // darkMode: 'class', // 暗黑模式
   content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx,html}'],
@@ -7,9 +10,15 @@ export default {
     extend: {
       height: {
         'screen/2': '50vh',
+        450: "450px",
       },
     },
   },
-  plugins: [],
+  plugins: [
+    // 添加Tailwind CSS 的 3D 插件 到您的 tailwind.config.js 文件中
+    tailwindCss3d,
+    // 添加Tailwind CSS 的 daisyUI组件库 作为插件 到您的 tailwind.config.js 文件中
+    daisyui,
+  ],
 }
 

@@ -1,22 +1,27 @@
 ## 安装
 pnpm add -D tailwindcss postcss autoprefixer
+pnpm add -D tailwindcss-3d
+nnpm add -D daisyui@latest
 npx tailwindcss init -p
 
 ## 语法规则
 
 ### 宽度
 * w-20
+* h-40
 
 ### 颜色
 
 * .bg-blue-500 表示背景色为蓝色（blue），并且其颜色值为 500，类别为 bg（背景）
 * bg-red-500 表示红色背景（颜色值为 #EF4444）
 * bg-blue-500 bg-opacity-90 给背景添加90％的不透明度
+* bg-green-200
 
 ### 隐藏
 * hidden
 
 ### 字体
+* font-semibold
 * .text-xl 表示字体大小
 * text-2xl（增加文本大小）
 * text-3xl
@@ -35,9 +40,15 @@ npx tailwindcss init -p
 * right
 * bottom
 * left
+* text-center
+* mt-10
+* ml-4
+* absolute
+* relative
 
 ### 形状
 * rounded 表示圆角；
+* rounded-xl
 * shadow 表示阴影；
 * bg-gradient-to-r 表示背景渐变。
 

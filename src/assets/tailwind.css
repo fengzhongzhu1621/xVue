@@ -1,0 +1,11 @@
+/*
+    编译然后输出css文件
+    npx tailwindcss -i src/assets/tailwind.css -o ./src/assets/main.css --watch
+*/
+
+/* 引入 tailwind 的基础样式 */
+@tailwind base;
+/* 引入 tailwind 的组件样式 */
+@tailwind components;
+/* 引入 tailwind 的工具样式 */
+@tailwind utilities;
