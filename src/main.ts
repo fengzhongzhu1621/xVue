@@ -1,5 +1,9 @@
 import { createApp } from "vue";
+
+// 导入样式
 import "./style.css";
+import "./assets/main.css";
+
 // 导入 App 组建
 import App from "./App.vue";
 // import FxButton from "@/components/examples/FxButton.vue";

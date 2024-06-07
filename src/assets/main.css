@@ -1,0 +1,6 @@
+/* 引入 tailwind 的基础样式 */
+@tailwind base;
+/* 引入 tailwind 的组件样式 */
+@tailwind components;
+/* 引入 tailwind 的工具样式 */
+@tailwind utilities;
