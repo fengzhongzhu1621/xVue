@@ -1,7 +1,8 @@
 import { createApp } from "vue";
+// 导入路由
+import router from "./router";
 
 // 导入样式
-import "./style.css";
 import "./assets/main.css";
 
 // 导入 App 组建
@@ -16,4 +17,6 @@ import App from "./App.vue";
 // Vue.components("FxButton", FxButton);
 
 // 创建应用
-createApp(App).mount("#app");
+let app = createApp(App);
+app.use(router);
+app.mount("#app");

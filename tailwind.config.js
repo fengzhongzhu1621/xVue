@@ -46,7 +46,7 @@ export default {
     aspectRatio,
   ],
   daisyui: {
-    themes: ["emerald"],
+    // themes: ["emerald"],
   },
   variants: {
     extend: {

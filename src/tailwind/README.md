@@ -111,10 +111,20 @@ npx tailwindcss init -p
 * bg-green-200
 * bg-indigo-700
 * bg-fuchsia-600
+* bg-slate-400
 * bg-[#8ed1fc]
 * text-white: 文本颜色白色
 * border-gray-300: 边框颜色为灰色
 * hover:bg-gray-200: 鼠标悬停时背景颜色变为灰色
+
+### 颜色渐变
+* bg-gradient-to-br 创建一个从左上角到右下角（从tl到br，即top left到bottom right）的渐变背景
+* from-teal-300 起始颜色为teal-300
+* from-10% 指定渐变的起始位置为10%
+* via-sky-400 在渐变路径上添加一个颜色停止点
+* via-30% 指定第二个颜色停止点的位置为30%，因为via-30%没有指定颜色。正确的用法应该是像via-purple-600 at 30%这样，指定颜色和位置。但假设这里的意图是继续使用前一个颜色（sky-400），我们将在示例中忽略这个错误。
+* to-pink-300 渐变背景的结束颜色
+* to-90%
 
 ### 显示/隐藏类
 * hidden 隐藏元素，相当于 display: none;
@@ -147,6 +157,8 @@ npx tailwindcss init -p
 * font-bold（font-weight：700；）
 * font-extrabold（font-weight：800；）
 * font-black（font-weight：900；）
+* font-semibold antialiased 字体抗锯齿
+* font-antialiased
 * text-green-100（颜色：# f0fff4;）
 * text-green-200（颜色：#c6f6d5；）
 * text-green-300（颜色：#9ae6b4；）
@@ -173,6 +185,7 @@ npx tailwindcss init -p
 * z-index
 * position
 * top
+* top-20
 * right
 * bottom
 * text-left: 左对齐
@@ -186,7 +199,9 @@ npx tailwindcss init -p
 ### 形状
 * rounded 表示圆角；
 * rounded-xl
+* rounded-3xl
 * shadow 表示阴影；
+* shadow-2xl
 * bg-gradient-to-r 表示背景渐变。
 * w-full
 * w-64: 宽度为 16rem
@@ -195,6 +210,7 @@ npx tailwindcss init -p
 * h-40
 * h-screen
 * h-full
+* lg:h-450
 * p-4: 内边距为 1rem
 * p-[19rem]
 * m-2: 外边距为 0.5rem
@@ -247,11 +263,19 @@ npx tailwindcss init -p
 * supports-[...] 特性查询，用来判断浏览器是否支持某些 css 特性，例如：@supports (display: grid) { ... }supports-[display:grid]:grid
 
 ### 动画
-* duration-1000 颜色会在1秒内缓慢变化。持续时间的多个值从duration-75 到duration-1000 注册。
+* duration-1000 描述某个动作、事件或动画的持续时间为1000毫秒（ms），也就是1秒。持续时间的多个值从duration-75 到duration-1000 注册。
 * transform
+* transform-style-3d 具有3D效果
+* transform-gpu 如果过渡在由 GPU 而不是 CPU 渲染时性能更好，则可以通过添加 transform-gpu 实用程序来强制硬件加速
+* rotate-y-180 监听鼠标状态使卡片仅在悬停时环绕Y轴(逆时针)方向旋转180度
+* hover:rotate-y-180
 * hover:scale-110 让按钮本身变大并通过悬停更改按钮的颜色，您可以使用transform 和scaling 的Utilize Class来实现
 * animate-bounce
 * animate-pulse
+* perspective-1000 对透视感进行感官上的放大效果，可以显得其3D效果更加真实
+* perspective-origin-center 由于CSS中的坐标系原点并非数学和构造中在左下角，而是正好与之相反，其坐标系的原点（x = 0,y = 0 ） 在二维空间中是浏览器窗口的左上角，即x正值方向从该原点向右，y正值方向从该原点向下。【所以在卡片进行旋转时在二维空间实际是只需一个点即可实现旋转，但由于3D翻转效果需要在三维空间进行旋转变换，这时就需要找到两个中心点即Y轴与Z轴方向，进而需要透视原点的属性值center，有点儿相当于transform-origin: center center;】
+* z-[2] 控制元素z轴堆叠顺序，数值较大的重叠元素会覆盖较小的元素，“z-[2]”此写法为没有特定意义的一次性任意值，方括号中的任意值可动态生成属性
+* backface-hidden 设置反面的可见性为隐藏效果
 
 ### flex
 * items-start, items-center, items-end, items-stretch: 设置交叉轴上的对齐方式
@@ -277,3 +301,19 @@ npx tailwindcss init -p
 
 ### @tailwindcss/aspect-ratio
 * aspect-video: w-[400px] aspect-video bg-blue-300
+
+
+### daisyui
+
+https://daisyui.com/components/card/
+
+#### card
+* card
+* card-title
+* card-body
+* card-actions
+* card-bordered
+* image-full
+* card-normal Responsive	Applies default paddings
+* card-compact Responsive	Applies smaller padding
+* card-side Responsive	The image in `<figure>` will be on to the side
