@@ -1,95 +1,215 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <!-- 注意这里引入的output.css文件，后面会用到 -->
-    <link rel="stylesheet" href="../assets/main.css">
-</head>
+    <link rel="stylesheet" href="../assets/main.css" />
+  </head>
 
-<body class="bg-[#8ed1fc] h-screen">
-    <h1 class="flex text-3xl font-bold underline text-blue-600">
-        Hello Tailwind CSS!
+  <!-- flex 布局 -->
+  <body class="h-screen">
+    <!-- 设置居中显示 -->
+    <div
+      class="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4"
+    >
+      <!-- 图像禁止缩放-->
+      <div class="shrink-0">
+        <img class="h-12 w-12" src="../assets/vue.svg" alt="ChitChat Logo" />
+      </div>
+      <div>
+        <div class="text-xl font-medium text-black">ChitChat</div>
+        <p class="text-slate-500">You have a new message!</p>
+      </div>
+    </div>
+    <h1 class="flex text-3xl font-bold underline text-blue-600 bg-[#8ed1fc]">
+      Hello Tailwind CSS!
     </h1>
-
-    <div class="text-center mt-10">
-        <p class="text-xs">字符大小设置</p>
-        <p class="text-sm">字符大小设置</p>
-        <p class="text-base">字符大小设置</p>
-        <p class="text-lg">字符大小设置</p>
-        <p class="text-xl">字符大小设置</p>
-        <p class="text-2xl">字符大小设置</p>
-        <p class="text-3xl">字符大小设置</p>
-        <p class="text-4xl">字符大小设置</p>
-        <p class="text-5xl">字符大小设置</p>
-        <p class="text-6xl">字符大小设置</p>
+    <!-- max-w-sm mx-auto 居中显示 -->
+    <div class="flex space-x-4 items-center max-w-sm mx-auto">
+        <button>Button 1</button>
+        <button>Button 2</button>
+        <button>Button 3</button>
+    </div>
+    <div class="sm:flex">
+        <div class="sm:flex-1 bg-red-500">Flex item 1</div>
+        <div class="sm:flex-1 bg-green-500">Flex item 2</div>
+        <div class="sm:flex-1 bg-blue-500">Flex item 3</div>
+    </div>
+    <div class="flex">
+        <div class="flex-grow-1 bg-red-500">Flex item with grow factor 1</div>
+        <div class="flex-grow-2 bg-green-500">Flex item with grow factor 2</div>
+        <div class="flex-grow-0 bg-blue-500">Flex item with grow factor 0</div>
     </div>
 
-    <div class="text-center mt-10">
-        <p class="font-thin">字符粗细设置</p>
-        <p class="font-extralight">字符粗细设置</p>
-        <p class="font-light">字符粗细设置</p>
-        <p class="font-normal">字符粗细设置</p>
-        <p class="font-medium">字符粗细设置</p>
-        <p class="font-semibold">字符粗细设置</p>
-        <p class="font-bold">字符粗细设置</p>
-        <p class="font-extrabold">字符粗细设置</p>
-        <p class="font-black">字符粗细设置</p>
+    <!-- 标签 -->
+    <div class="bg-white dark:bg-black">
+      <h1 class="text-gray-900 dark:text-white">Dark mode</h1>
+      <p class="text-gray-500 dark:text-gray-300">
+        支持暗色标签， 这样可以根据顶级HTML是否含有我们的Dark标识，切换样式
+      </p>
     </div>
 
-    <div class="text-center mt-10">
-        <p class="text-green-100">文字颜色设置</p>
-        <p class="text-green-200">文字颜色设置</p>
-        <p class="text-green-300">文字颜色设置</p>
-        <p class="text-green-400">文字颜色设置</p>
-        <p class="text-green-500">文字颜色设置</p>
-        <p class="text-green-600">文字颜色设置</p>
-        <p class="text-green-700">文字颜色设置</p>
-        <p class="text-green-800">文字颜色设置</p>
-        <p class="text-green-900">文字颜色设置</p>
-    </div>
-    
-    <div class="container flex items-center flex-col w-full">
-        <h2 class="text-4xl text-center my-5 font-bold " >Test Title</h2>
-        <button class="bg-green-300 hover:bg-green-500 rounded px-2 py-2">Button</button>
-    </div>
-    <div class="text-center mt-10">
-        <button class="bg-indigo-700 font-semibold text-white py-2 px-4 rounded">自定义按钮</button>
-        <button class="bg-cyan btn hover:bg-red-500 focus:outline-none focus:shadow-outline">自定义颜色</button>
-        <button class="bg-red-700 btn hover:bg-red-500 focus:outline-none focus:shadow-outline duration-1000 transform hover:scale-110">自定义按钮</button>
-        <button class="dark:md:hover:bg-fuchsia-600">自定义按钮</button>
-    </div>
-
-    <div class="group m-10 p-10 border hover:bg-gray-100">
-        <p class="font-black group-hover:text-red-900">群组设置</p>
-        <p class="font-black group-hover:text-blue-900">群组设置</p>
-    </div>
-      
-
-    <div class="w-20">
-        <div class="line-clamp-3">
-           xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-           xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-           xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-           xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-           xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-           xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-           xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-           xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-           xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    <div class="bg-white mx-auto max-w-sm shadow-lg rounded-lg overflow-hidden">
+        <div class="sm:flex sm:items-center px-6 py-4">
+          <img class="block h-16 sm:h-24 rounded-full mx-auto mb-4 sm:mb-0 sm:mr-4 sm:ml-0" src="https://avatars2.githubusercontent.com/u/4323180?s=400&u=4962a4441fae9fba5f0f86456c6c506a21ffca4f&v=4" alt="">
+          <div class="text-center sm:text-left sm:flex-grow">
+            <div class="mb-4">
+              <p class="text-xl leading-tight">Adam Wathan</p>
+              <p class="text-sm leading-tight text-grey-dark">Developer at NothingWorks Inc.</p>
+            </div>
+            <div>
+              <button class="text-xs font-semibold rounded-full px-4 py-1 leading-normal bg-white border border-purple text-purple hover:bg-purple hover:text-white">Message</button>
+            </div>
+          </div>
         </div>
     </div>
 
-    <div class="w-[400px] aspect-video bg-blue-300">
-    <video
-        src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
-        class="w-full h-full"
-        controls />
+    <!-- 正方形 -->
+    <div class="grid grid-cols-10 gap-2 h-10">
+      <div class="bg-sky-50 aspect-square"></div>
+      <div class="bg-sky-100 aspect-square"></div>
+      <div class="bg-sky-200 aspect-square"></div>
+      <div class="bg-sky-300 aspect-square"></div>
+      <div class="bg-sky-400 aspect-square"></div>
+      <div class="bg-sky-500 aspect-square"></div>
+      <div class="bg-sky-600 aspect-square"></div>
+      <div class="bg-sky-700 aspect-square"></div>
+      <div class="bg-sky-800 aspect-square"></div>
+      <div class="bg-sky-900 aspect-square"></div>
     </div>
 
-</body>
+    <!-- 无序列表 -->
+    <ul class="list-disc pl-4">
+      <li>Item 1</li>
+      <li>
+        Item 2
+        <ul class="list-disc pl-6">
+          <li>Subitem 1</li>
+          <li>Subitem 2</li>
+        </ul>
+      </li>
+      <li>Item 3</li>
+    </ul>
 
+    <!-- 大写转换 -->
+    <p class="uppercase text-xl">This text is in uppercase.</p>
+    <div class="md:flex">
+        <div class="p-5">
+          <div
+              class="uppercase tracking-wide text-2xl text-indigo-500 dark:text-indigo-200 font-semibold"
+          >
+            大小写转换 abc
+          </div>
+          <div
+              class="mt-2 text-slate-500 dark:text-slate-400 w-100">
+            <p class="text-lg font-medium">
+              <ul class="list-disc">
+                <li>Android</li>
+                <li><span
+                    class="decoration-sky-400 text-pink-500 dark:text-pink-300">Red</span>；
+                </li>
+                <li>
+                    <!-- 设置下划线颜色为浅蓝色 -->
+                    <span
+                    class="text-sky-500 dark:text-sky-300 underline decoration-indigo-400"
+                >浅蓝色</span>ヾ(≧≦)〃
+                </li>
+              </ul>
+            </p>
+          </div>
+        </div>
+    </div>
 
+    <!-- 字符大小 -->
+    <div class="text-center mt-10">
+      <p class="text-xs">字符大小设置</p>
+      <p class="text-sm">字符大小设置</p>
+      <p class="text-base">字符大小设置</p>
+      <p class="text-lg">字符大小设置</p>
+      <p class="text-xl">字符大小设置</p>
+      <p class="text-2xl">字符大小设置</p>
+      <p class="text-3xl">字符大小设置</p>
+      <p class="text-4xl">字符大小设置</p>
+      <p class="text-5xl">字符大小设置</p>
+      <p class="text-6xl">字符大小设置</p>
+    </div>
+
+    <!-- 字符粗细 -->
+    <div class="text-center mt-10">
+      <p class="font-thin">字符粗细设置</p>
+      <p class="font-extralight">字符粗细设置</p>
+      <p class="font-light">字符粗细设置</p>
+      <p class="font-normal">字符粗细设置</p>
+      <p class="font-medium">字符粗细设置</p>
+      <p class="font-semibold">字符粗细设置</p>
+      <p class="font-bold">字符粗细设置</p>
+      <p class="font-extrabold">字符粗细设置</p>
+      <p class="font-black">字符粗细设置</p>
+    </div>
+
+    <!-- 文字颜色 -->
+    <div class="text-center mt-10">
+      <p class="text-green-100">文字颜色设置</p>
+      <p class="text-green-200">文字颜色设置</p>
+      <p class="text-green-300">文字颜色设置</p>
+      <p class="text-green-400">文字颜色设置</p>
+      <p class="text-green-500">文字颜色设置</p>
+      <p class="text-green-600">文字颜色设置</p>
+      <p class="text-green-700">文字颜色设置</p>
+      <p class="text-green-800">文字颜色设置</p>
+      <p class="text-green-900">文字颜色设置</p>
+    </div>
+
+    <!-- 按钮 -->
+    <div class="container flex items-center flex-col w-full">
+      <h2 class="text-4xl text-center my-5 font-bold">Test Title</h2>
+      <button class="bg-green-300 hover:bg-green-500 rounded px-2 py-2">
+        Button
+      </button>
+    </div>
+    <div class="text-center mt-10">
+      <button class="bg-indigo-700 font-semibold text-white py-2 px-4 rounded">
+        自定义按钮
+      </button>
+      <button
+        class="bg-cyan btn hover:bg-red-500 focus:outline-none focus:shadow-outline"
+      >
+        自定义颜色
+      </button>
+      <button
+        class="bg-red-700 btn hover:bg-red-500 focus:outline-none focus:shadow-outline duration-1000 transform hover:scale-110"
+      >
+        自定义按钮
+      </button>
+      <button class="dark:md:hover:bg-fuchsia-600">自定义按钮</button>
+    </div>
+
+    <!-- 组 -->
+    <div class="group m-10 p-10 border hover:bg-gray-100">
+      <p class="font-black group-hover:text-red-900">群组设置</p>
+      <p class="font-black group-hover:text-blue-900">群组设置</p>
+    </div>
+
+    <!-- line-clamp     -->
+    <div class="w-20">
+      <div class="line-clamp-3">
+        xxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        xxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        xxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        xxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+      </div>
+    </div>
+
+    <!-- 视频 -->
+    <div class="w-[400px] aspect-video bg-blue-300">
+      <video
+        src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
+        class="w-full h-full"
+        controls
+      />
+    </div>
+  </body>
 </html>
