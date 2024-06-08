@@ -9,10 +9,87 @@
     <link rel="stylesheet" href="../assets/main.css">
 </head>
 
-<body>
+<body class="bg-[#8ed1fc] h-screen">
     <h1 class="flex text-3xl font-bold underline text-blue-600">
         Hello Tailwind CSS!
     </h1>
+
+    <div class="text-center mt-10">
+        <p class="text-xs">字符大小设置</p>
+        <p class="text-sm">字符大小设置</p>
+        <p class="text-base">字符大小设置</p>
+        <p class="text-lg">字符大小设置</p>
+        <p class="text-xl">字符大小设置</p>
+        <p class="text-2xl">字符大小设置</p>
+        <p class="text-3xl">字符大小设置</p>
+        <p class="text-4xl">字符大小设置</p>
+        <p class="text-5xl">字符大小设置</p>
+        <p class="text-6xl">字符大小设置</p>
+    </div>
+
+    <div class="text-center mt-10">
+        <p class="font-thin">字符粗细设置</p>
+        <p class="font-extralight">字符粗细设置</p>
+        <p class="font-light">字符粗细设置</p>
+        <p class="font-normal">字符粗细设置</p>
+        <p class="font-medium">字符粗细设置</p>
+        <p class="font-semibold">字符粗细设置</p>
+        <p class="font-bold">字符粗细设置</p>
+        <p class="font-extrabold">字符粗细设置</p>
+        <p class="font-black">字符粗细设置</p>
+    </div>
+
+    <div class="text-center mt-10">
+        <p class="text-green-100">文字颜色设置</p>
+        <p class="text-green-200">文字颜色设置</p>
+        <p class="text-green-300">文字颜色设置</p>
+        <p class="text-green-400">文字颜色设置</p>
+        <p class="text-green-500">文字颜色设置</p>
+        <p class="text-green-600">文字颜色设置</p>
+        <p class="text-green-700">文字颜色设置</p>
+        <p class="text-green-800">文字颜色设置</p>
+        <p class="text-green-900">文字颜色设置</p>
+    </div>
+    
+    <div class="container flex items-center flex-col w-full">
+        <h2 class="text-4xl text-center my-5 font-bold " >Test Title</h2>
+        <button class="bg-green-300 hover:bg-green-500 rounded px-2 py-2">Button</button>
+    </div>
+    <div class="text-center mt-10">
+        <button class="bg-indigo-700 font-semibold text-white py-2 px-4 rounded">自定义按钮</button>
+        <button class="bg-cyan btn hover:bg-red-500 focus:outline-none focus:shadow-outline">自定义颜色</button>
+        <button class="bg-red-700 btn hover:bg-red-500 focus:outline-none focus:shadow-outline duration-1000 transform hover:scale-110">自定义按钮</button>
+        <button class="dark:md:hover:bg-fuchsia-600">自定义按钮</button>
+    </div>
+
+    <div class="group m-10 p-10 border hover:bg-gray-100">
+        <p class="font-black group-hover:text-red-900">群组设置</p>
+        <p class="font-black group-hover:text-blue-900">群组设置</p>
+    </div>
+      
+
+    <div class="w-20">
+        <div class="line-clamp-3">
+           xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+           xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+           xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+           xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+           xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+           xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+           xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+           xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+           xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        </div>
+    </div>
+
+    <div class="w-[400px] aspect-video bg-blue-300">
+    <video
+        src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
+        class="w-full h-full"
+        controls />
+    </div>
+
 </body>
+
 
 </html>

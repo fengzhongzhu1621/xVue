@@ -1,11 +1,18 @@
 /*
     编译然后输出css文件
-    npx tailwindcss -i src/assets/tailwind.css -o ./src/assets/main.css --watch
+    --minify  启用压缩
+    --watch   启用热加载更新文件
+    npx tailwindcss -i src/assets/tailwind.css -o ./src/assets/main.css --minify --watch
 */
 
 /* 引入 tailwind 的基础样式 */
 @tailwind base;
 /* 引入 tailwind 的组件样式 */
 @tailwind components;
+
+.btn{
+    @apply font-semibold text-white py-2 px-4 rounded-full;
+}
+
 /* 引入 tailwind 的工具样式 */
 @tailwind utilities;
