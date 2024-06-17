@@ -81,17 +81,41 @@
     </div>
 
     <!-- 无序列表 -->
-    <ul class="list-disc pl-4">
-      <li>Item 1</li>
-      <li>
-        Item 2
-        <ul class="list-disc pl-6">
-          <li>Subitem 1</li>
-          <li>Subitem 2</li>
-        </ul>
-      </li>
-      <li>Item 3</li>
-    </ul>
+    <div>
+      <p>无序列表</p>
+      <ul class="list-disc pl-4">
+        <li>Item 1</li>
+        <li>
+          Item 2
+          <ul class="list-disc pl-6">
+            <li>Subitem 1</li>
+            <li>Subitem 2</li>
+          </ul>
+        </li>
+        <li>Item 3</li>
+      </ul>
+      
+      <p>子元素之间添加一致的间距</p>
+      <ul class="divide-y divide-gray-200">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+      </ul>
+    </div>
+
+    <div>
+      <p>管理子元素之间的边距</p>
+      <div>
+        <div class="bg-blue-100 p-4">Box 1</div>
+        <div class="bg-blue-100 p-4">Box 2</div>
+        <div class="bg-blue-100 p-4">Box 3</div>
+      </div>
+    </div>
+
+    <div>
+      <p>渐变色</p>
+      <div class="bg-gradient-to-r from-green-400 via-blue-500 to-purple-600">Gradient background</div>
+    </div>
 
     <!-- 大写转换 -->
     <p class="uppercase text-xl">This text is in uppercase.</p>
@@ -184,6 +208,12 @@
         自定义按钮
       </button>
       <button class="dark:md:hover:bg-fuchsia-600">自定义按钮</button>
+      <div>
+        <p>为元素添加焦点和轮廓</p>
+        <button class="ring-2 ring-blue-500 focus:ring-4 focus:ring-blue-300">
+          Button with ring
+        </button>
+      </div>
     </div>
 
     <!-- 组 -->
@@ -192,8 +222,14 @@
       <p class="font-black group-hover:text-blue-900">群组设置</p>
     </div>
 
-    <!-- line-clamp     -->
+    <!-- 单行文本截断 -->
+    <div>
+      <p>单行文本截断</p>
+      <p class="truncate">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+    </div>
+    <!-- line-clamp 多行文本截断  -->
     <div class="w-20">
+      <p>多行文本截断</p>
       <div class="line-clamp-3">
         xxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
         xxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
@@ -203,13 +239,44 @@
       </div>
     </div>
 
+    <div>
+      对元素后面的区域应用图形效果，如模糊或颜色变换。可以为模态框、覆盖层创建视觉效果
+      <div class="backdrop-filter backdrop-blur-md bg-white bg-opacity-30 p-4">
+        Blurred backdrop content
+      </div>
+    </div>
+
+    <div>
+        <p>弹跳动画</p>
+        <div class="animate-bounce">
+          Bouncing element
+        </div>
+    </div>
+
+    <div>
+      <p>缩放、旋转和平移</p>
+      <div class="transform hover:scale-105 transition-transform duration-300">
+        Hover to scale
+      </div>
+    </div>
     <!-- 视频 -->
     <div class="w-[400px] aspect-video bg-blue-300">
+      <p>视频</p>
       <video
         src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
         class="w-full h-full"
         controls
       />
     </div>
+
+
+    <div>
+      <p>元素比例</p>
+      <div class="aspect-w-16 aspect-h-9">
+        <iframe class="w-full h-full" src="https://fanyi.baidu.com/mtpe-individual/multimodal#/auto/zh/" frameboarder="0"></iframe>
+      </div>
+      <div class="aspect-ratio-16x9 bg-gray-200 w-full h-screen"></div>
+    </div>
+
   </body>
 </html>

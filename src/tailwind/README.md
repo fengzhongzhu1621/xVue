@@ -8,6 +8,7 @@ pnpm add -D @tailwindcss/line-clamp
 pnpm add -D tailwindcss-3d
 nnpm add -D daisyui@latest
 npx tailwindcss init -p
+npx tailwindcss -i src/assets/tailwind.css -o ./src/assets/main.css --watch
 
 ## 命名规则
 * 属性（Property）： 表示样式属性的缩写，如 bg 表示背景颜色。
@@ -140,6 +141,7 @@ npx tailwindcss init -p
 * decoration-indigo-400 设置下划线颜色为浅蓝色（indigo-400）
 
 ### 颜色渐变
+* bg-gradient-to-r 创建一个从左到右的渐变背景
 * bg-gradient-to-br 创建一个从左上角到右下角（从tl到br，即top left到bottom right）的渐变背景
 * from-teal-300 起始颜色为teal-300
 * from-10% 指定渐变的起始位置为10%
@@ -223,7 +225,6 @@ npx tailwindcss init -p
 * shadow 表示阴影；
 * shadow-2xl
 * shadow-md
-* bg-gradient-to-r 表示背景渐变。
 * w-full 使元素的宽度与其父容器相同
 * w-64: 宽度为 16rem
 * w-76 自定义宽度
@@ -249,6 +250,7 @@ npx tailwindcss init -p
 * border-purple 设置元素的边框颜色为紫色。
 * border-t border-gray-200 边框
 * max-w-custom 自定义最大宽度
+* aspect-ratio 类用于设置元素的宽高比
 * aspect-square 创建宽高比为 1:1 的元素，即正方形。
 * aspect-square bg-blue-500 w-full sm:h-64 md:h-80 lg:h-96 希望正方形的大小能够响应式地调整，可以使用 Tailwind CSS 中的响应式前缀，如 sm:, md:, lg: 或 xl:，正方形的高度会根据屏幕尺寸的变化而变化，同时保持宽高比为 1:1
 * shrink-0 用于控制元素的缩放行为。具体来说，shrink-0 会将元素的缩放比例设置为 0，这意味着元素不会随着父容器的尺寸变化而缩小。这在某些情况下很有用，比如当你希望保持元素的尺寸不变，即使其父容器尺寸减小。只会影响元素的缩放行为，不会影响其位置或其他样式属性。此外，如果元素设置了固定的宽度或高度，那么在某些情况下，即使使用了 shrink-0，元素仍可能根据其内容进行缩放。
@@ -294,10 +296,11 @@ npx tailwindcss init -p
 * transform
 * transform-style-3d 具有3D效果
 * transform-gpu 如果过渡在由 GPU 而不是 CPU 渲染时性能更好，则可以通过添加 transform-gpu 实用程序来强制硬件加速
+* transition-transform 设置元素的 transform 属性的过渡效果。
 * rotate-y-180 监听鼠标状态使卡片仅在悬停时环绕Y轴(逆时针)方向旋转180度
 * hover:rotate-y-180
-* hover:scale-110 让按钮本身变大并通过悬停更改按钮的颜色，您可以使用transform 和scaling 的Utilize Class来实现
-* animate-bounce
+* hover:scale-110 当鼠标悬停在按钮上时，将按钮放大 10%
+* animate-bounce 用于应用一个弹跳动画
 * animate-pulse
 * perspective-1000 对透视感进行感官上的放大效果，可以显得其3D效果更加真实
 * perspective-origin-center 由于CSS中的坐标系原点并非数学和构造中在左下角，而是正好与之相反，其坐标系的原点（x = 0,y = 0 ） 在二维空间中是浏览器窗口的左上角，即x正值方向从该原点向右，y正值方向从该原点向下。【所以在卡片进行旋转时在二维空间实际是只需一个点即可实现旋转，但由于3D翻转效果需要在三维空间进行旋转变换，这时就需要找到两个中心点即Y轴与Z轴方向，进而需要透视原点的属性值center，有点儿相当于transform-origin: center center;】
@@ -341,7 +344,7 @@ npx tailwindcss init -p
 
 
 ### @tailwindcss/aspect-ratio
-* aspect-video: w-[400px] aspect-video bg-blue-300 设置元素的宽高比为 16:9
+* aspect-video 设置元素的宽高比为 16:9
 
 
 ### daisyui
