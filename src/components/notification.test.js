@@ -33,6 +33,7 @@ describe("notification.vue", () => {
         const wrapper = mount(notification, {
             props: { message },
         });
+        // toEqual() 会检查 data 对象是否与 { one: 1 } 相等，而不仅仅是检查它们是否引用相同的对象。
         expect(wrapper.classes()).toEqual(
             expect.arrayContaining(["notification--slide"])
         );
