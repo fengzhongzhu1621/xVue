@@ -1,6 +1,5 @@
 <script>
 import moment from 'moment';
-import { isMemoSame } from 'vue';
 
 export default {
     name: 'MomentExample',
